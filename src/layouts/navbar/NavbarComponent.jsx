@@ -1,7 +1,8 @@
 import DropdownMenu from "components/menu/DropdownMenu";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./css/Navbar.css";
+import profil from "./images/profil.jpg"
 function NavbarComponent({ bgColor, navbarContainerStyles }) {
   return (
     <div
@@ -26,6 +27,13 @@ function NavbarComponent({ bgColor, navbarContainerStyles }) {
           </Link>
         </div>
         <DropdownMenu />
+      </div>
+      <div className="">
+        <img
+          src={profil}
+          alt=""
+          className="image"
+        />
       </div>
     </div>
   );

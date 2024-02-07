@@ -40,7 +40,7 @@ const SidebarItem = ({
           justifyContent: "center",
         }}
       >
-        <linkItem.icon size={22} className="icon" />
+        <linkItem.icon size={20} className="icon mb-3" />
       </div>
       <p
         style={{

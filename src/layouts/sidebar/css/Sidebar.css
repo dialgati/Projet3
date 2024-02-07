@@ -1,0 +1,14 @@
+/* @media screen (width:){
+  .theme{
+  width: 50px !important;
+  border-radius: 50%;
+} */
+.theme p{
+  font-size: 2px !important;
+}
+@media screen and (max-width: 900px) { 
+  .theme {
+  display: none;
+}
+}
+
