@@ -20,15 +20,16 @@ const SidebarComponent = ({ bgColor, activeLinkColor, activeLinkBgColor, colorOn
         backgroundColor: bgColor ? bgColor : "#fff",
         height: "100%",
         padding: "25px 10px",
+        overflow: "hidden",
       }}
     >
       <div className="d-flex justify-content-start align-items-center flex-wrap">
         <Navbar.Brand
           href="#Dashboard"
-          className="d-flex justify-content-around flex-wrap"
+          className="d-flex justify-content-around flex-row"
         >
-          <FaHamburger className="fs-2 ms-2" />
-          <p className=" ms-3 theme"> Xtreme</p>
+          <FaHamburger className="fs-2 ms-1" />
+          <p className="theme ms-4"> Xtreme</p>
         </Navbar.Brand>
       </div>
       <ResourceDataMap

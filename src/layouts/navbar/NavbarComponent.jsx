@@ -17,7 +17,7 @@ function NavbarComponent({ bgColor, navbarContainerStyles }) {
         ...navbarContainerStyles,
       }}
     >
-      <div className="d-flex text-decoration-none text-light">
+      <div className="d-flex text-decoration-none ms-5 text-light">
         <div className="">
           <Link className="me-3 text-decoration-none text-light fs-5">
             Starter

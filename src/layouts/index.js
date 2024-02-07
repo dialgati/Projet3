@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useRef } from "react";
 import { useMemo } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsXLg } from "react-icons/bs";
 import useWindowDimensions from "../hooks/useWindowsDimention";
 import styled from "styled-components";
 
@@ -44,11 +45,11 @@ const SidebarPaner = styled.div`
 `;
 const MenuController = styled.div`
   position: absolute;
-  top: 5px;
-  right: -10px;
+  top: 12px;
+  // left: 20px;
+
   width: 30px;
   height: 30px;
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -96,17 +97,17 @@ const SpliTemplateScreen = ({ children }) => {
   return (
     <Container>
       <NavbarPaner openedMenu={openedMenu} minViewPort={minViewPort}>
+        <MenuController onClick={handleResize}>
+          {openedMenu ? (
+            <BsXLg className="menu-controller-icon text-light ms-3" />
+          ) : (
+            <GiHamburgerMenu className="menu-controller-icon text-light" />
+          )}
+        </MenuController>
         {navbar}
       </NavbarPaner>
       <BodyContainer>
         <SidebarPaner openedMenu={openedMenu} ref={sidebarRef}>
-          <MenuController onClick={handleResize}>
-            {openedMenu ? (
-              <GiHamburgerMenu className="menu-controller-icon" />
-            ) : (
-              <GiHamburgerMenu className="menu-controller-icon" />
-            )}
-          </MenuController>
           {sidebar}
         </SidebarPaner>
         <ContaintOutlet openedMenu={openedMenu} minViewPort={minViewPort}>
