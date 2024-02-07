@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./css/Navbar.css";
 import profil from "./images/profil.jpg"
+import { DropdownButton, Dropdown } from "react-bootstrap";
 function NavbarComponent({ bgColor, navbarContainerStyles }) {
   return (
     <div
@@ -28,15 +29,26 @@ function NavbarComponent({ bgColor, navbarContainerStyles }) {
         </div>
         <DropdownMenu />
       </div>
-      <div className="">
-        <img
-          src={profil}
-          alt=""
-          className="image"
-        />
+      <div>
+        <DropdownButton id="dropdown-basic-button" className="">
+          <div className="text-center">
+            <img src={profil} alt="" className="rounded-circle w-50" />
+          </div>
+          <h6 className="text-secondary-subtile ms-3">Info</h6>
+          <Dropdown.Item href="#/action-1">My Account</Dropdown.Item>
+          <Dropdown.Item href="#/action-2">Edit Profile</Dropdown.Item>
+          <p className="border border-light fs-1 my-2"></p>
+          <Dropdown.Item href="#/action-3">My Balance</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Inbox</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">Logout</Dropdown.Item>
+        </DropdownButton>
       </div>
     </div>
   );
 }
 
 export default NavbarComponent;
+
+// <div className="">
+//   <img src={profil} alt="" className="image" />
+// </div>;

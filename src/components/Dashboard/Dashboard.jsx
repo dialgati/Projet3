@@ -41,7 +41,7 @@ function Dashboard() {
                 <div className="d-flex justify-content-between align-items-center">
                   <div className="d-flex">
                     {item.icon && (
-                      <p className=" border border-primary text-light p-3 fs-5 bg-primary rounded-5">
+                      <p className="text-light text-center p-3 rounded-5 fs-5 bg-primary">
                         {item.icon}
                       </p>
                     )}

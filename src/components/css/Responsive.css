@@ -1,0 +1,15 @@
+@media screen and (min-width: 900px){
+    #MenuControllerInSidebar{
+        display: none;
+    }
+    .ContaintOutlet{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #MenuControllerInSidebar{
+        display: flex;
+    }
+     
+}

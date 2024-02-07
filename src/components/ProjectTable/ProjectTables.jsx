@@ -58,13 +58,12 @@ const tableData = [
 const ProjectTables = () => {
   return (
     <div>
-      <Card className="mt-3">
+      <Card className="mt-3 shadow-sm border-0">
         <CardBody>
           <CardTitle tag="h5">Project Listing</CardTitle>
           <CardSubtitle className="mb-2 text-muted" tag="h6">
             Overview of the projects
           </CardSubtitle>
-
           <Table className="no-wrap mt-3 align-middle" responsive borderless>
             <thead>
               <tr>
