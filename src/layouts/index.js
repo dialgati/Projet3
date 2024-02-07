@@ -1,4 +1,4 @@
-
+import "../components/css/Responsive.css";
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useMemo } from "react";
@@ -24,7 +24,7 @@ const NavbarPaner = styled.div`
   z-index: 2;
   padding: ${({ openedMenu, minViewPort }) =>
   openedMenu ?
-    "0px 0px 0 50px" :
+    "0px 0px 0 0px" :
     minViewPort ?
       "0px 0px 0 60px" :
       "0px 0px 0 250px"};
@@ -33,7 +33,7 @@ const BodyContainer = styled.div`
   display: flex;
 `;
 const SidebarPaner = styled.div`
-  width: ${({ openedMenu }) => (!openedMenu ? "250px" : "60px")};
+  width: ${({ openedMenu }) => (!openedMenu ? "250px" : "0px")};
   height: 100vh;
   position: fixed;
   top: 0px;
@@ -46,8 +46,7 @@ const SidebarPaner = styled.div`
 const MenuController = styled.div`
   position: absolute;
   top: 12px;
-  // left: 20px;
-
+   // left: 20px;
   width: 30px;
   height: 30px;
   display: flex;
@@ -66,7 +65,7 @@ const ContaintOutlet = styled.div`
   z-index: 1;
   padding: ${({ openedMenu, minViewPort }) =>
   openedMenu ?
-    "70px 10px 0 70px" :
+    "40px 30px 0 35px" :
     minViewPort ?
       "70px 10px 0 70px" :
       "70px 10px 0 280px"};
@@ -99,15 +98,22 @@ const SpliTemplateScreen = ({ children }) => {
       <NavbarPaner openedMenu={openedMenu} minViewPort={minViewPort}>
         <MenuController onClick={handleResize}>
           {openedMenu ? (
-            <BsXLg className="menu-controller-icon text-light ms-3" />
+            <GiHamburgerMenu className="menu-controller-icon text-light ms-3" />
           ) : (
-            <GiHamburgerMenu className="menu-controller-icon text-light" />
+            <BsXLg className="menu-controller-icon text-light" />
           )}
         </MenuController>
         {navbar}
       </NavbarPaner>
       <BodyContainer>
         <SidebarPaner openedMenu={openedMenu} ref={sidebarRef}>
+          <MenuController onClick={handleResize} id="MenuControllerInSidebar">
+            {openedMenu ? (
+              <BsXLg className="menu-controller-icon text-black ms-5 " />
+            ) : (
+              <GiHamburgerMenu className="menu-controller-icon text-light" />
+            )}
+          </MenuController>
           {sidebar}
         </SidebarPaner>
         <ContaintOutlet openedMenu={openedMenu} minViewPort={minViewPort}>

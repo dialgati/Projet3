@@ -50,7 +50,7 @@ const FeedData = [
 
 const Feeds = () => {
   return (
-    <Card className="mt-3">
+    <Card className="mt-3 border-0 shadow-sm">
       <CardBody>
         <CardTitle tag="h5">Feeds</CardTitle>
         <CardSubtitle className="mb-2 text-muted" tag="h6">

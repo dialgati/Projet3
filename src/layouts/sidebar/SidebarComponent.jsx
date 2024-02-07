@@ -28,7 +28,7 @@ const SidebarComponent = ({ bgColor, activeLinkColor, activeLinkBgColor, colorOn
           href="#Dashboard"
           className="d-flex justify-content-around flex-row"
         >
-          <FaHamburger className="fs-2 ms-1" />
+          <FaHamburger className="fs-2 ms-1 mb-4" />
           <p className="theme ms-4"> Xtreme</p>
         </Navbar.Brand>
       </div>
