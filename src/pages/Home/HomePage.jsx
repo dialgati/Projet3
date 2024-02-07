@@ -1,16 +1,16 @@
-import ClientCard from "components/Client/ClientCard"
 import Dashboard from "components/Dashboard/Dashboard"
-import Tableau from "components/Tableau/Tableau"
+import Feeds from "components/Feeds/Feeds"
+import ProjectTables from "components/ProjectTable/ProjectTables";
 import React from "react"
 
 function HomePage() {
   return (
     <div>
-    <Dashboard />
-    <Tableau />
-    <ClientCard />
+      <Dashboard />
+      <Feeds />
+      <ProjectTables />
     </div>
-  )
+  );
 }
 
 export default HomePage

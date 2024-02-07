@@ -41,10 +41,9 @@ const IconContainer = styled.span`
   position: absolute;
   left: -1px;
 `
-
 function Input({
   type,
-  value = '',
+  value = "",
   onChange,
   label,
   errorMessage,

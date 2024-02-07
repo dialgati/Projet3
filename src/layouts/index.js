@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { useRef } from "react";
 import { useMemo } from "react";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import useWindowDimensions from "../hooks/useWindowsDimention";
 import styled from "styled-components";
 
@@ -46,14 +46,12 @@ const MenuController = styled.div`
   position: absolute;
   top: 5px;
   right: -10px;
-  width: 25px;
-  height: 25px;
+  width: 30px;
+  height: 30px;
   background-color: #fff;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #008fa0;
   cursor: pointer;
   z-index: 3;
 `;
@@ -104,9 +102,9 @@ const SpliTemplateScreen = ({ children }) => {
         <SidebarPaner openedMenu={openedMenu} ref={sidebarRef}>
           <MenuController onClick={handleResize}>
             {openedMenu ? (
-              <AiOutlineArrowRight className="menu-controller-icon" />
+              <GiHamburgerMenu className="menu-controller-icon" />
             ) : (
-              <AiOutlineArrowLeft className="menu-controller-icon" />
+              <GiHamburgerMenu className="menu-controller-icon" />
             )}
           </MenuController>
           {sidebar}
