@@ -65,7 +65,7 @@ const ContaintOutlet = styled.div`
   z-index: 1;
   padding: ${({ openedMenu, minViewPort }) =>
   openedMenu ?
-    "40px 30px 0 35px" :
+    "40px 30px 0 34px" :
     minViewPort ?
       "70px 10px 0 70px" :
       "70px 10px 0 280px"};
@@ -100,7 +100,7 @@ const SpliTemplateScreen = ({ children }) => {
           {openedMenu ? (
             <GiHamburgerMenu className="menu-controller-icon text-light ms-3" />
           ) : (
-            <BsXLg className="menu-controller-icon text-light" />
+            <BsXLg className="menu-controller-icon text-black" />
           )}
         </MenuController>
         {navbar}
@@ -109,7 +109,7 @@ const SpliTemplateScreen = ({ children }) => {
         <SidebarPaner openedMenu={openedMenu} ref={sidebarRef}>
           <MenuController onClick={handleResize} id="MenuControllerInSidebar">
             {openedMenu ? (
-              <BsXLg className="menu-controller-icon text-black ms-5 " />
+              <BsXLg className="menu-controller-icon text-black ms-5" />
             ) : (
               <GiHamburgerMenu className="menu-controller-icon text-light" />
             )}

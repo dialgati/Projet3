@@ -19,7 +19,6 @@ const SidebarComponent = ({ bgColor, activeLinkColor, activeLinkBgColor, colorOn
       style={{
         backgroundColor: bgColor ? bgColor : "#fff",
         height: "100%",
-        padding: "25px 10px",
         overflow: "hidden",
       }}
     >
